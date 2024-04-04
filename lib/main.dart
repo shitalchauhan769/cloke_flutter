@@ -2,8 +2,8 @@ import 'package:digital_cloke_flutter/screen/cloke_screen.dart';
 import 'package:flutter/material.dart';
 void main()
 {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: ClokeScreen(),
+    home: ClockScreen(),
   ),);
 }

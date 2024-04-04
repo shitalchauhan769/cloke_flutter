@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ClokeScreen extends StatefulWidget {
-  const ClokeScreen({super.key});
+class ClockScreen extends StatefulWidget {
+  const ClockScreen({super.key});
 
   @override
-  State<ClokeScreen> createState() => _ClokeScreenState();
+  State<ClockScreen> createState() => _ClockScreenState();
 }
 
-class _ClokeScreenState extends State<ClokeScreen> {
+class _ClockScreenState extends State<ClockScreen> {
   DateTime time = DateTime.now();
 
   @override
@@ -15,6 +15,9 @@ class _ClokeScreenState extends State<ClokeScreen> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xff1a4066),
+          appBar: AppBar(
+            title:const Text("ClockScreen",style: TextStyle(fontSize: 20)),
+          ),
           body: Center(
         child: Stack(
           alignment: Alignment.center,
@@ -51,7 +54,13 @@ class _ClokeScreenState extends State<ClokeScreen> {
             ),
           ],
         ),
-      )),
+      ),
+        drawer: const Column(
+          children: [
+            Text("Drawer",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),)
+          ],
+        ),
+      ),
     );
     return const Placeholder();
   }
